@@ -3,10 +3,195 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>disimple49 - Página de Arte</title>
+    <title>disimple49</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        header {
+            width: 100%;
+            background-color: #fff;
+            padding: 20px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .logo h1 {
+            font-size: 2rem;
+            color: #ff6f61;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        nav ul li {
+            margin: 0 15px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-size: 1.2rem;
+        }
+        
+        .hero {
+            background-color: #ffefdb;
+            padding: 50px 20px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .cta-button {
+            background-color: #ff6f61;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1rem;
+        }
+
+        .cta-button:hover {
+            background-color: #ff5a47;
+        }
+        
+        .gallery-grid {
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        }
+
+        .gallery-item {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        
+        .gallery-item-info h4 {
+            font-size: 1.2rem;
+            margin-top: 10px;
+            color: #333;
+        }
+        
+        .gallery-item-info p {
+            color: #777;
+        }
+
+        .about {
+            display: flex;
+            justify-content: space-between;
+            padding: 40px 20px;
+        }
+        
+        .about-image {
+            flex: 0 0 auto;
+            margin: 0 auto;
+            max-width: 250px;
+        }
+        
+        .about-content {
+            flex: 1;
+            margin-left: 20px;
+        }
+
+        .social-links a {
+            text-decoration: none;
+            margin-right: 15px;
+            font-size: 1.5rem;
+            color: #ff6f61;
+        }
+        
+        .contact {
+            background-color: #f1f1f1;
+            padding: 40px 20px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .contact-form {
+            display: grid;
+            gap: 15px;
+            justify-items: center;
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .form-group textarea {
+            height: 120px;
+            resize: none;
+        }
+
+        .footer-nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .footer-nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #ff6f61;
+        }
+
+        .back-to-top {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #ff6f61;
+            font-size: 2rem;
+        }
+
+        .kawaii-element {
+            font-size: 1.5rem;
+            opacity: 0.2;
+            animation: float 5s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -19,88 +204,123 @@
                 <ul>
                     <li><a href="#gallery">Galería</a></li>
                     <li><a href="#about">Sobre Mí</a></li>
-                    <li><a href="#social">Redes Sociales</a></li>
+                    <li><a href="#contact">Redes Sociales</a></li>
                 </ul>
             </nav>
         </header>
-
+        
         <div class="hero">
             <h2>¡Bienvenido a mi mundo de dibujos kawaii!</h2>
             <p>Hola, soy un artista apasionado por crear ilustraciones coloridas con un estilo único que mezcla lo kawaii con toques de fantasía. En este espacio comparto mis creaciones, desde personajes adorables hasta paisajes imaginarios. ¡Explora mi galería y únete a este universo lleno de color!</p>
             <button class="cta-button">Ver mis dibujos</button>
         </div>
+        
         <section class="gallery" id="gallery">
-            <h3>Galería de Dibujos</h3>
-            <div class="gallery-items">
+            <h3 class="section-title">Mi Galería</h3>
+            <div class="gallery-grid">
                 <div class="gallery-item">
-                    <img src="https://drive.google.com/uc?export=view&id=11kjS_pGPvIT-zr-jaInqjG9XO-v64BdE" alt="Dibujo kawaii">
+                    <img src="/api/placeholder/400/320" alt="Dibujo kawaii">
                     <div class="gallery-item-info">
-                        <h4>Flor Pastel</h4>
-                        <p>Un delicado dibujo de una flor con colores pastel</p>
+                        <h4>Mundo Dulce</h4>
+                        <p>Personajes explorando un mundo de dulces</p>
                     </div>
                 </div>
                 
                 <div class="gallery-item">
-                    <img src="https://drive.google.com/uc?export=view&id=11v3hJJW8Iyq9d5g8GGwjNEqmwvpwaSwK" alt="Dibujo kawaii">
+                    <img src="/api/placeholder/400/320" alt="Dibujo kawaii">
                     <div class="gallery-item-info">
-                        <h4>Rostro Estrellado</h4>
-                        <p>Chica sonriente con fondo estrellado</p>
+                        <h4>Princesa Espacial</h4>
+                        <p>Aventuras intergalácticas</p>
                     </div>
                 </div>
                 
                 <div class="gallery-item">
-                    <img src="https://drive.google.com/uc?export=view&id=11PTJurbG8MhZffe-lNSTLmZS_3nbnZ1h" alt="Dibujo kawaii">
+                    <img src="/api/placeholder/400/320" alt="Dibujo kawaii">
                     <div class="gallery-item-info">
-                        <h4>Peces y Burbujas</h4>
-                        <p>Dibujo de peces rojos en el agua azul con burbujas</p>
+                        <h4>Bosque Encantado</h4>
+                        <p>Criaturas mágicas del bosque</p>
                     </div>
                 </div>
                 
                 <div class="gallery-item">
-                    <img src="https://drive.google.com/uc?export=view&id=11HIq3DB8oiKLuiyiSc7XtEKol1DFWBgL" alt="Dibujo kawaii">
+                    <img src="/api/placeholder/400/320" alt="Dibujo kawaii">
                     <div class="gallery-item-info">
-                        <h4>Chica de Perfil</h4>
-                        <p>Dibujo de chica con lentes en un fondo rosa</p>
-                    </div>
-                </div>
-
-                <div class="gallery-item">
-                    <img src="https://drive.google.com/uc?export=view&id=11BI458bdAU1ZKsWoof--kIjd66sEt37e" alt="Dibujo kawaii">
-                    <div class="gallery-item-info">
-                        <h4>Camino Arcoíris</h4>
-                        <p>Un paisaje con un árbol arcoiris en un camino</p>
+                        <h4>Amigos Marinos</h4>
+                        <p>La vida bajo el mar</p>
                     </div>
                 </div>
                 
                 <div class="gallery-item">
-                    <img src="https://drive.google.com/uc?export=view&id=11Dl-QT_Keo_gl15d5UVYinjXMxqqPafT" alt="Dibujo kawaii">
+                    <img src="/api/placeholder/400/320" alt="Dibujo kawaii">
                     <div class="gallery-item-info">
-                        <h4>Luna Llena</h4>
-                        <p>Una luna llena con estrellas en el cielo</p>
+                        <h4>Sueños de Nube</h4>
+                        <p>Aventuras en el cielo</p>
                     </div>
                 </div>
                 
                 <div class="gallery-item">
-                    <img src="https://drive.google.com/uc?export=view&id=118dY_pLb5nR0vuBHnge0Sg1JCh_H4SXM" alt="Dibujo kawaii">
+                    <img src="/api/placeholder/400/320" alt="Dibujo kawaii">
                     <div class="gallery-item-info">
-                        <h4>Cajita Escuchando Música</h4>
-                        <p>Cajita de cartón disfrutando de la música en un campo</p>
+                        <h4>Jardín Mágico</h4>
+                        <p>Flores y plantas con vida</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="hero">
+            <h2>¡Bienvenido a mi mundo de dibujos kawaii!</h2>
+            <p>Hola, soy un artista apasionado por crear ilustraciones coloridas con un estilo único que mezcla lo kawaii con toques de fantasía. En este espacio comparto mis creaciones, desde personajes adorables hasta paisajes imaginarios. ¡Explora mi galería y únete a este universo lleno de color!</p>
+            <button class="cta-button">Ver mis dibujos</button>
+        </div>
+        
+        <section class="gallery" id="gallery">
+            <h3 class="section-title">Mi Galería</h3>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="/api/placeholder/400/320" alt="Dibujo kawaii">
+                    <div class="gallery-item-info">
+                        <h4>Mundo Dulce</h4>
+                        <p>Personajes explorando un mundo de dulces</p>
                     </div>
                 </div>
                 
                 <div class="gallery-item">
-                    <img src="https://drive.google.com/uc?export=view&id=11XRuJCaT-aj08bn-p2mwndikFeb2ar28" alt="Dibujo kawaii">
+                    <img src="/api/placeholder/400/320" alt="Dibujo kawaii">
                     <div class="gallery-item-info">
-                        <h4>Chica con Rosquilla</h4>
-                        <p>Una chica feliz sosteniendo una rosquilla</p>
+                        <h4>Princesa Espacial</h4>
+                        <p>Aventuras intergalácticas</p>
                     </div>
                 </div>
                 
                 <div class="gallery-item">
-                    <img src="https://drive.google.com/uc?export=view&id=11AL1cdwr9otNHkmy4fuo94yRmhSUjJFP" alt="Dibujo kawaii">
+                    <img src="/api/placeholder/400/320" alt="Dibujo kawaii">
                     <div class="gallery-item-info">
-                        <h4>Cajita en Paisaje Natural</h4>
-                        <p>Cajita de cartón en un paisaje de naturaleza</p>
+                        <h4>Bosque Encantado</h4>
+                        <p>Criaturas mágicas del bosque</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="/api/placeholder/400/320" alt="Dibujo kawaii">
+                    <div class="gallery-item-info">
+                        <h4>Amigos Marinos</h4>
+                        <p>La vida bajo el mar</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="/api/placeholder/400/320" alt="Dibujo kawaii">
+                    <div class="gallery-item-info">
+                        <h4>Sueños de Nube</h4>
+                        <p>Aventuras en el cielo</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="/api/placeholder/400/320" alt="Dibujo kawaii">
+                    <div class="gallery-item-info">
+                        <h4>Jardín Mágico</h4>
+                        <p>Flores y plantas con vida</p>
                     </div>
                 </div>
             </div>
@@ -108,7 +328,7 @@
         
         <section class="about" id="about">
             <div class="about-image">
-                <img src="https://drive.google.com/uc?export=view&id=11ep5DZIIw7HZ1WO8BtoEJn9yBrwsRy7q" alt="Foto del artista">
+                <img src="/api/placeholder/400/320" alt="Foto del artista">
             </div>
             <div class="about-content">
                 <h3>Sobre el Artista</h3>
@@ -117,30 +337,124 @@
                 <p>Además de dibujar, me encanta compartir mi proceso creativo y conectar con otros amantes del arte. ¡No dudes en contactarme para colaboraciones o simplemente para conversar sobre arte!</p>
                 
                 <div class="social-links">
-                    <a href="https://www.instagram.com/disimple49/" class="social-link">📷</a>
-                    <a href="https://twitter.com/disimple49" class="social-link">🐦</a>
-                    <a href="https://www.tiktok.com/@disimple49" class="social-link">📱</a>
-                    <a href="https://www.youtube.com/@disimple49" class="social-link">🎮</a>
+                    <a href="#" class="social-link">📷</a>
+                    <a href="#" class="social-link">🐦</a>
+                    <a href="#" class="social-link">📱</a>
+                    <a href="#" class="social-link">🎮</a>
                 </div>
             </div>
         </section>
-        <section class="social" id="social">
-            <h3>Redes Sociales</h3>
-            <div class="social-content">
-                <p>¡Puedes seguirme en mis redes sociales para ver más de mi trabajo y mis creaciones! No dudes en interactuar conmigo, ¡me encantaría conocer tu opinión sobre mis dibujos!</p>
-                <div class="social-links">
-                    <a href="https://www.instagram.com/disimple49/" class="social-link">Instagram</a>
-                    <a href="https://twitter.com/disimple49" class="social-link">Twitter</a>
-                    <a href="https://www.tiktok.com/@disimple49" class="social-link">TikTok</a>
-                    <a href="https://www.youtube.com/@disimple49" class="social-link">YouTube</a>
-                </div>
+        <section class="contact" id="contact">
+            <div class="contact-decorations">
+                <span class="decoration">🌟</span>
+                <span class="decoration">🌈</span>
+                <span class="decoration">💕</span>
+                <span class="decoration">✨</span>
             </div>
+            
+            <h3>¡Hablemos!</h3>
+            <p>¿Te gustaría una comisión personalizada? ¿Tienes alguna pregunta o simplemente quieres saludar? ¡Escríbeme un mensaje y te responderé lo antes posible!</p>
+            
+            <form class="contact-form">
+                <div class="form-group">
+                    <input type="text" placeholder="Tu nombre">
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Tu correo electrónico">
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="Tu mensaje"></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="cta-button">Enviar Mensaje</button>
+                </div>
+            </form>
         </section>
-
+        
         <footer>
-            <p>&copy; 2025 disimple49. Todos los derechos reservados.</p>
+            <p>© 2025 KawaiiArtSpace - Todos los derechos reservados</p>
+            <div class="footer-nav">
+                <a href="#gallery">Galería</a>
+                <a href="#about">Sobre Mí</a>
+                <a href="#contact">Contacto</a>
+            </div>
+            <a href="#" class="back-to-top">↑</a>
         </footer>
-    </main>
+    </div>
+    
+    <!-- Kawaii elementos decorativos -->
+    <div class="kawaii-element star" style="top: 120px; left: 10%;">⭐</div>
+    <div class="kawaii-element heart" style="top: 200px; right: 15%;">❤️</div>
+    <div class="kawaii-element cloud" style="top: 300px; left: 5%;">☁️</div>
+    <div class="kawaii-element star" style="top: 400px; right: 8%;">✨</div>
+    <div class="kawaii-element heart" style="top: 500px; left: 12%;">💖</div>
+    <div class="kawaii-element cloud" style="top: 600px; right: 5%;">☁️</div>
 
+    <script>
+        // Función para hacer que el botón CTA lleve al usuario a la galería
+        document.querySelector('.cta-button').addEventListener('click', function() {
+            document.querySelector('#gallery').scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+        
+        // Función para hacer que el botón "Volver arriba" funcione
+        document.querySelector('.back-to-top').addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Añadir efecto hover a los elementos de la galería
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        galleryItems.forEach(item => {
+            item.addEventListener('mouseover', function() {
+                this.style.transform = 'translateY(-10px) scale(1.02)';
+            });
+            
+            item.addEventListener('mouseout', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+        
+        // Añadir efecto al enviar el formulario
+        document.querySelector('.contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('¡Gracias por tu mensaje! Te responderé pronto 💖');
+            this.reset();
+        });
+        
+        // Función para añadir aleatoriamente elementos kawaii en la página
+        function addRandomKawaiiElements() {
+            const elements = ['⭐', '💖', '☁️', '✨', '🌈', '🍭', '🌟', '🎀'];
+            const body = document.body;
+            const maxElements = 10;
+            
+            for (let i = 0; i < maxElements; i++) {
+                const element = document.createElement('div');
+                element.className = 'kawaii-element';
+                element.textContent = elements[Math.floor(Math.random() * elements.length)];
+                
+                // Posición aleatoria
+                const top = Math.random() * (window.innerHeight - 50);
+                const left = Math.random() * (window.innerWidth - 50);
+                
+                element.style.position = 'fixed';
+                element.style.top = `${top}px`;
+                element.style.left = `${left}px`;
+                element.style.fontSize = '1.5rem';
+                element.style.opacity = '0.2';
+                element.style.zIndex = '-1';
+                element.style.animation = `float ${5 + Math.random() * 10}s ease-in-out infinite`;
+                
+                body.appendChild(element);
+            }
+        }
+        
+        // Llamar a la función una vez cargada la página
+        window.addEventListener('load', addRandomKawaiiElements);
+    </script>
 </body>
 </html>
