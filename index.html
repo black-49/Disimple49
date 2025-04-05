@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Disimple49</title>
+    <title>KawaiiArtSpace</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&family=Rubik:wght@300;400;700&display=swap');
         
@@ -13,6 +13,8 @@
             --orange-pastel: #ffb347;
             --yellow-pastel: #fbdb65;
             --purple-pastel: #a78ce8;
+            --pink-pastel: #ff9aa2;
+            --green-pastel: #77dd77;
             --main-bg: #181818;
             --text-color: #e0e0e0;
             --shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -108,7 +110,7 @@
         }
         
         nav a::after {
-            content: "â˜ ï¸";
+            content: "☠️";
             position: absolute;
             top: -10px;
             right: -5px;
@@ -137,7 +139,7 @@
         }
         
         .hero::before {
-            content: "â˜ ï¸";
+            content: "☠️";
             position: absolute;
             top: -15px;
             left: 50%;
@@ -287,7 +289,7 @@
         }
         
         .gallery-item::before {
-            content: "â˜ ï¸";
+            content: "☠️";
             position: absolute;
             top: 10px;
             right: 10px;
@@ -521,7 +523,7 @@
         footer {
             text-align: center;
             padding: 30px;
-            background-color: white;
+            background-color: #222;
             border-radius: var(--border-radius) var(--border-radius) 0 0;
             box-shadow: var(--shadow);
             position: relative;
@@ -556,14 +558,14 @@
         }
         
         .footer-nav a:hover {
-            color: #ff6bcb;
+            color: var(--pink-pastel);
         }
         
         .back-to-top {
             display: inline-block;
             margin-top: 15px;
             background-color: var(--green-pastel);
-            color: white;
+            color: #111;
             width: 40px;
             height: 40px;
             border-radius: 50%;
@@ -576,7 +578,7 @@
         
         .back-to-top:hover {
             transform: translateY(-5px);
-            background-color: #7873f5;
+            background-color: var(--purple-pastel);
         }
         
         /* Kawaii Elements */
@@ -663,72 +665,96 @@
     <div class="container">
         <header>
             <div class="logo">
-                <span class="logo-icon">ðŸŽ¨</span>
-                <h1>Disimple49</h1>
+                <span class="logo-icon">🎨</span>
+                <h1>KawaiiArtSpace</h1>
             </div>
             <nav>
                 <ul>
-                    <li><a href="#gallery">GalerÃ­a</a></li>
-                    <li><a href="#about">Sobre MÃ­</a></li>
+                    <li><a href="#gallery">Galería</a></li>
+                    <li><a href="#about">Sobre Mí</a></li>
                     <li><a href="#contact">Contacto</a></li>
                 </ul>
             </nav>
         </header>
         
         <div class="hero">
-            <h2>Â¡Bienvenido a mi mundo de dibujos random!</h2>
-            <p>Hola, soy un artista apasionado por crear ilustraciones, que mezcla lo kawaii con toques de fantasÃ­a y cosas random. En este espacio comparto mis creaciones horribles, desde personajes hasta paisajes imaginarios o lo que se me pueda ocurrir. Â¡Explora mi galerÃ­a y Ãºnete a este universo lleno de color de un inexperto!</p>
+            <h2>¡Bienvenido a mi mundo de dibujos kawaii!</h2>
+            <p>Hola, soy un artista apasionado por crear ilustraciones coloridas con un estilo único que mezcla lo kawaii con toques de fantasía. En este espacio comparto mis creaciones, desde personajes adorables hasta paisajes imaginarios. ¡Explora mi galería y únete a este universo lleno de color!</p>
             <button class="cta-button">Ver mis dibujos</button>
         </div>
         
         <section class="gallery" id="gallery">
-            <h3 class="section-title">Mi GalerÃ­a</h3>
+            <h3 class="section-title">Mi Galería</h3>
             <div class="gallery-grid">
                 <div class="gallery-item">
-                    <img src="/api/placeholder/400/320" alt="Dibujo kawaii">
+                    <img src="/api/placeholder/400/320" alt="Flor con colores pastel">
                     <div class="gallery-item-info">
-                        <h4>FLORES</h4>
-                        <p>Variedad de flores</p>
+                        <h4>Flor en Pasteles</h4>
+                        <p>Dibujo de una flor con suaves colores pastel</p>
                     </div>
                 </div>
                 
                 <div class="gallery-item">
-                    <img src="/api/placeholder/400/320" alt="Dibujo kawaii">
+                    <img src="/api/placeholder/400/320" alt="Chica de perfil sonriendo">
                     <div class="gallery-item-info">
-                        <h4>ANSIEDAD</h4>
-                        <p>Personajes y emociones</p>
+                        <h4>Sonrisa Estrellada</h4>
+                        <p>Rostro de perfil de una chica sonriendo en un fondo de estrellas</p>
                     </div>
                 </div>
                 
                 <div class="gallery-item">
-                    <img src="/api/placeholder/400/320" alt="Dibujo kawaii">
+                    <img src="/api/placeholder/400/320" alt="Peces rojos con burbujas">
                     <div class="gallery-item-info">
-                        <h4>Bosque Encantado</h4>
-                        <p>Criaturas mÃ¡gicas del bosque</p>
+                        <h4>Océano de Burbujas</h4>
+                        <p>Peces rojos nadando entre burbujas en agua azul</p>
                     </div>
                 </div>
                 
                 <div class="gallery-item">
-                    <img src="/api/placeholder/400/320" alt="Dibujo kawaii">
+                    <img src="/api/placeholder/400/320" alt="Chica de perfil con lentes">
                     <div class="gallery-item-info">
-                        <h4>Amigos Marinos</h4>
-                        <p>La vida bajo el mar</p>
+                        <h4>Mirada Rosa</h4>
+                        <p>Chica de perfil con lentes sobre un fondo rosa</p>
                     </div>
                 </div>
                 
                 <div class="gallery-item">
-                    <img src="/api/placeholder/400/320" alt="Dibujo kawaii">
+                    <img src="/api/placeholder/400/320" alt="Camino con árbol arcoíris">
                     <div class="gallery-item-info">
-                        <h4>SueÃ±os de Nube</h4>
-                        <p>Aventuras en el cielo</p>
+                        <h4>Sendero del Corazón</h4>
+                        <p>Camino en tonos verdes con árbol arcoíris y roca en forma de corazón</p>
                     </div>
                 </div>
                 
                 <div class="gallery-item">
-                    <img src="/api/placeholder/400/320" alt="Dibujo kawaii">
+                    <img src="/api/placeholder/400/320" alt="Luna llena con estrellas">
                     <div class="gallery-item-info">
-                        <h4>JardÃ­n MÃ¡gico</h4>
-                        <p>Flores y plantas con vida</p>
+                        <h4>Noche Mágica</h4>
+                        <p>Luna llena brillante rodeada de estrellas en cielo nocturno</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="/api/placeholder/400/320" alt="Cajita escuchando música">
+                    <div class="gallery-item-info">
+                        <h4>Melodía en el Campo</h4>
+                        <p>Cajita con cuerpo de cartón escuchando música sentada en un campo</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="/api/placeholder/400/320" alt="Chica con rosquilla">
+                    <div class="gallery-item-info">
+                        <h4>Dulce Tentación</h4>
+                        <p>Chica en estilo cartón feliz sosteniendo una rosquilla</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="/api/placeholder/400/320" alt="Cajita con flor">
+                    <div class="gallery-item-info">
+                        <h4>Regalo de la Naturaleza</h4>
+                        <p>Cajita con cuerpo de cartón en paisaje natural con una flor en la mano</p>
                     </div>
                 </div>
             </div>
@@ -740,36 +766,36 @@
             </div>
             <div class="about-content">
                 <h3>Sobre el Artista</h3>
-                <p>Â¡Hola! Soy un artista digital especializado en ilustraciones de estilo kawaii y fantasÃ­a. Mi pasiÃ³n por el dibujo comenzÃ³ desde pequeÃ±o, inspirado por los animes, videojuegos y la cultura pop japonesa.</p>
-                <p>Mi estilo se caracteriza por colores vibrantes, personajes adorables y mundos llenos de imaginaciÃ³n. Cada ilustraciÃ³n cuenta una historia Ãºnica y estÃ¡ creada con amor y dedicaciÃ³n.</p>
-                <p>AdemÃ¡s de dibujar, me encanta compartir mi proceso creativo y conectar con otros amantes del arte. Â¡No dudes en contactarme para colaboraciones o simplemente para conversar sobre arte!</p>
+                <p>¡Hola! Soy un artista digital especializado en ilustraciones de estilo kawaii y fantasía. Mi pasión por el dibujo comenzó desde pequeño, inspirado por los animes, videojuegos y la cultura pop japonesa.</p>
+                <p>Mi estilo se caracteriza por colores vibrantes, personajes adorables y mundos llenos de imaginación. Cada ilustración cuenta una historia única y está creada con amor y dedicación.</p>
+                <p>Además de dibujar, me encanta compartir mi proceso creativo y conectar con otros amantes del arte. ¡No dudes en contactarme para colaboraciones o simplemente para conversar sobre arte!</p>
                 
                 <div class="social-links">
-                    <a href="#" class="social-link">ðŸ“·</a>
-                    <a href="#" class="social-link">ðŸ¦</a>
-                    <a href="#" class="social-link">ðŸ“±</a>
-                    <a href="#" class="social-link">ðŸŽ®</a>
+                    <a href="#" class="social-link">📷</a>
+                    <a href="#" class="social-link">🐦</a>
+                    <a href="#" class="social-link">📱</a>
+                    <a href="#" class="social-link">🎮</a>
                 </div>
             </div>
         </section>
         
         <section class="contact" id="contact">
             <div class="contact-decorations">
-                <span class="decoration">ðŸŒŸ</span>
-                <span class="decoration">ðŸŒˆ</span>
-                <span class="decoration">ðŸ’•</span>
-                <span class="decoration">âœ¨</span>
+                <span class="decoration">🌟</span>
+                <span class="decoration">🌈</span>
+                <span class="decoration">💕</span>
+                <span class="decoration">✨</span>
             </div>
             
-            <h3>Â¡Hablemos!</h3>
-            <p>Â¿Te gustarÃ­a una comisiÃ³n personalizada? Â¿Tienes alguna pregunta o simplemente quieres saludar? Â¡EscrÃ­beme un mensaje y te responderÃ© lo antes posible!</p>
+            <h3>¡Hablemos!</h3>
+            <p>¿Te gustaría una comisión personalizada? ¿Tienes alguna pregunta o simplemente quieres saludar? ¡Escríbeme un mensaje y te responderé lo antes posible!</p>
             
             <form class="contact-form">
                 <div class="form-group">
                     <input type="text" placeholder="Tu nombre">
                 </div>
                 <div class="form-group">
-                    <input type="email" placeholder="Tu correo electrÃ³nico">
+                    <input type="email" placeholder="Tu correo electrónico">
                 </div>
                 <div class="form-group">
                     <textarea placeholder="Tu mensaje"></textarea>
@@ -781,13 +807,13 @@
         </section>
         
         <footer>
-            <p>Â© 2025 KawaiiArtSpace - Todos los derechos reservados</p>
+            <p>© 2025 KawaiiArtSpace - Todos los derechos reservados</p>
             <div class="footer-nav">
-                <a href="#gallery">GalerÃ­a</a>
-                <a href="#about">Sobre MÃ­</a>
+                <a href="#gallery">Galería</a>
+                <a href="#about">Sobre Mí</a>
                 <a href="#contact">Contacto</a>
             </div>
-            <a href="#" class="back-to-top">â†‘</a>
+            <a href="#" class="back-to-top">↑</a>
         </footer>
     </div>
     
