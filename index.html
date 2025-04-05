@@ -130,43 +130,33 @@
             </div>
         </div>
     </section>
-    .contact {
-    text-align: center;
-    padding: 50px 20px;
-    background-color: #f9f9f9;
-}
+<section class="contact" id="contact">
+    <div class="contact-decorations">
+        <span class="decoration">🌟</span>
+        <span class="decoration">🌈</span>
+        <span class="decoration">💕</span>
+        <span class="decoration">✨</span>
+    </div>
 
-.contact-decorations {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
+    <h3>¡Conéctate conmigo!</h3>
+    <p>¡Sígueme en mis redes sociales y acompáñame en mis proyectos!</p>
+    
+    <div class="social-links">
+        <a href="https://www.youtube.com/@disimple49" class="social-link" target="_blank">🎥 YouTube</a>
+        <a href="https://www.instagram.com/disimple49" class="social-link" target="_blank">📷 Instagram</a>
+        <a href="https://www.tiktok.com/@disimple49" class="social-link" target="_blank">🎶 TikTok</a>
+    </div>
+</section>
 
-.social-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 20px;
-}
-
-.social-button {
-    background-color: #f8c3d9;
-    padding: 10px 20px;
-    font-size: 1.2rem;
-    border: 2px solid #f8a8c8;
-    border-radius: 25px;
-    color: #333;
-    text-decoration: none;
-    transition: transform 0.3s ease;
-}
-
-.social-button:hover {
-    transform: translateY(-5px);
-    background-color: #f0a0b3;
-}
-
-.social-button:active {
-    transform: translateY(2px);
-}
+<footer>
+    <p>© 2025 KawaiiArtSpace - Todos los derechos reservados</p>
+    <div class="footer-nav">
+        <a href="#gallery">Galería</a>
+        <a href="#about">Sobre Mí</a>
+        <a href="#contact">Contacto</a>
+    </div>
+    <a href="#" class="back-to-top">↑</a>
+</footer>
 
 <!-- Kawaii elementos decorativos -->
 <div class="kawaii-element star" style="top: 120px; left: 10%;">⭐</div>
@@ -183,7 +173,7 @@
             behavior: 'smooth'
         });
     });
-    
+
     // Función para hacer que el botón "Volver arriba" funcione
     document.querySelector('.back-to-top').addEventListener('click', function(e) {
         e.preventDefault();
@@ -192,6 +182,8 @@
             behavior: 'smooth'
         });
     });
+</script>
+
     
     // Añadir efecto hover a los elementos de la galería
     const galleryItems = document.querySelectorAll('.gallery-item');
