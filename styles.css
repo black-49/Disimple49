@@ -1,192 +1,4 @@
-/* styles.css */
-
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f8f8f8;
-}
-
-.container {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-header {
-    background-color: #ffb6c1;
-    padding: 20px;
-    text-align: center;
-}
-
-header .logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-header h1 {
-    font-size: 2rem;
-    color: #ffffff;
-}
-
-nav ul {
-    display: flex;
-    justify-content: center;
-    padding: 0;
-    list-style: none;
-}
-
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 1.1rem;
-}
-
-.hero {
-    background-color: #ffecf1;
-    padding: 50px;
-    text-align: center;
-}
-
-.hero h2 {
-    font-size: 2rem;
-    color: #333;
-}
-
-.hero p {
-    font-size: 1rem;
-    color: #555;
-}
-
-.cta-button {
-    background-color: #ffb6c1;
-    color: #fff;
-    padding: 10px 20px;
-    font-size: 1rem;
-    border: none;
-    cursor: pointer;
-}
-
-.cta-button:hover {
-    background-color: #ff8f8f;
-}
-
-.gallery {
-    padding: 20px;
-}
-
-.gallery h3 {
-    text-align: center;
-    font-size: 1.5rem;
-}
-
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 20px;
-}
-
-.gallery-item img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
-
-.gallery-item-info {
-    text-align: center;
-    padding: 10px;
-}
-
-.about {
-    display: flex;
-    flex-direction: row;
-    padding: 20px;
-}
-
-.about-image {
-    flex: 0 0 250px;
-    margin-right: 20px;
-}
-
-.about-image img {
-    width: 100%;
-    border-radius: 8px;
-}
-
-.about-content {
-    flex: 1;
-}
-
-.social-links {
-    margin-top: 20px;
-}
-
-.social-link {
-    margin: 0 10px;
-    font-size: 1.5rem;
-    text-decoration: none;
-}
-
-.contact {
-    padding: 20px;
-    background-color: #ffecf1;
-}
-
-.contact-decorations {
-    text-align: center;
-}
-
-.contact-decorations .decoration {
-    font-size: 2rem;
-    margin: 0 5px;
-}
-
-.contact-form {
-    display: grid;
-    gap: 15px;
-    max-width: 500px;
-    margin: 0 auto;
-}
-
-.form-group input, .form-group textarea {
-    width: 100%;
-    padding: 10px;
-    font-size: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-}
-
-.form-group button {
-    padding: 10px 20px;
-    background-color: #ffb6c1;
-    border: none;
-    cursor: pointer;
-}
-
-.footer-nav {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-.footer-nav a {
-    margin: 0 10px;
-    text-decoration: none;
-    color: #333;
-}
-
-.back-to-top {
-    display: block;
-    text-align: center;
-    margin-top: 20px;
-    font-size: 2rem;
-}
-
+/* Estilos para los elementos kawaii */
 .kawaii-element {
     position: fixed;
     font-size: 1.5rem;
@@ -195,31 +7,213 @@ nav ul li a {
     animation: float 5s ease-in-out infinite;
 }
 
-@keyframes float {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-30px); }
-    100% { transform: translateY(0); }
+.kawaii-element.star1 {
+    top: 120px;
+    left: 10%;
 }
 
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-    }
+.kawaii-element.heart1 {
+    top: 200px;
+    right: 15%;
+}
 
-    .about {
-        flex-direction: column;
-    }
+.kawaii-element.cloud1 {
+    top: 300px;
+    left: 5%;
+}
 
-    .about-image {
-        max-width: 200px;
-        margin: 0 auto;
-    }
+.kawaii-element.star2 {
+    top: 400px;
+    right: 8%;
+}
 
-    .contact-form {
-        grid-template-columns: 1fr;
-    }
+.kawaii-element.heart2 {
+    top: 500px;
+    left: 12%;
+}
 
-    .gallery-grid {
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+.kawaii-element.cloud2 {
+    top: 600px;
+    right: 5%;
+}
+
+/* Animación flotante para los elementos kawaii */
+@keyframes float {
+    0% {
+        transform: translateY(0);
     }
+    50% {
+        transform: translateY(-15px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Estilos de fondo y decoración */
+body {
+    background-color: #f7f8fc; /* Fondo claro para toda la página */
+    font-family: 'Arial', sans-serif;
+}
+
+/* Estilos generales de la página */
+h1, h2, h3, h4, p {
+    color: #444;
+}
+
+/* Hero section */
+.hero {
+    background-color: #ffebfa;
+    padding: 50px;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 2rem;
+    color: #ff6b9f;
+}
+
+.hero p {
+    color: #444;
+}
+
+/* Botón CTA */
+.cta-button {
+    background-color: #ff6b9f;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.cta-button:hover {
+    background-color: #ff3385;
+}
+
+/* Sección de galería */
+.gallery {
+    background-color: #fff;
+    padding: 50px 0;
+}
+
+.gallery h3 {
+    font-size: 1.8rem;
+    color: #ff6b9f;
+    text-align: center;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.gallery-item img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.gallery-item-info {
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+}
+
+.gallery-item h4 {
+    font-size: 1.2rem;
+    color: #ff6b9f;
+}
+
+.gallery-item p {
+    color: #666;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+/* Sobre el Artista */
+.about {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 0;
+    background-color: #ffebfa;
+}
+
+.about-image img {
+    width: 250px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.about-content {
+    flex: 1;
+    padding-left: 20px;
+}
+
+.about h3 {
+    color: #ff6b9f;
+}
+
+.about p {
+    color: #444;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.social-links {
+    margin-top: 20px;
+}
+
+.social-link {
+    font-size: 2rem;
+    margin-right: 10px;
+    color: #ff6b9f;
+}
+
+.social-link:hover {
+    color: #ff3385;
+}
+
+/* Footer */
+footer {
+    background-color: #ff6b9f;
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+}
+
+footer a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #ff3385;
+}
+
+.footer-nav {
+    margin-top: 20px;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ff6b9f;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.back-to-top:hover {
+    background-color: #ff3385;
 }
