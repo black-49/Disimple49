@@ -1,38 +1,40 @@
-/* Reset de márgenes y padding */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* styles.css */
 
-/* Fondo general */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f0f8ff;
-    color: #333;
-    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
 }
 
-/* Contenedor principal */
-main {
-    width: 100%;
-    margin: 0 auto;
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-/* Estilos para el título principal */
-h1 {
+header {
+    background-color: #ffb6c1;
+    padding: 20px;
     text-align: center;
-    font-size: 3rem;
-    margin: 20px 0;
-    color: #f28a8c;
 }
 
-/* Botones de navegación */
+header .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 2rem;
+    color: #ffffff;
+}
+
 nav ul {
     display: flex;
     justify-content: center;
+    padding: 0;
     list-style: none;
-    padding: 20px 0;
 }
 
 nav ul li {
@@ -40,124 +42,84 @@ nav ul li {
 }
 
 nav ul li a {
+    color: #ffffff;
     text-decoration: none;
-    font-size: 1.2rem;
-    color: #f28a8c;
-    transition: color 0.3s;
-}
-
-nav ul li a:hover {
-    color: #ff66b2;
-}
-
-/* Sección de bienvenida */
-.welcome {
-    text-align: center;
-    padding: 40px 0;
-}
-
-.welcome h2 {
-    font-size: 2.5rem;
-    color: #ff66b2;
-}
-
-.welcome p {
     font-size: 1.1rem;
-    max-width: 600px;
-    margin: 20px auto;
-    line-height: 1.8;
+}
+
+.hero {
+    background-color: #ffecf1;
+    padding: 50px;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 2rem;
+    color: #333;
+}
+
+.hero p {
+    font-size: 1rem;
     color: #555;
 }
 
-/* Estilos para la galería */
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
-    padding: 40px 20px;
-    justify-items: center;
+.cta-button {
+    background-color: #ffb6c1;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
 }
 
-.gallery-item {
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
+.cta-button:hover {
+    background-color: #ff8f8f;
+}
+
+.gallery {
+    padding: 20px;
+}
+
+.gallery h3 {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
 }
 
 .gallery-item img {
     width: 100%;
     height: auto;
-    display: block;
-    object-fit: cover;
+    border-radius: 8px;
 }
 
 .gallery-item-info {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    padding: 10px;
     text-align: center;
-    visibility: hidden;
+    padding: 10px;
 }
 
-.gallery-item:hover .gallery-item-info {
-    visibility: visible;
-    transform: translateY(0);
-}
-
-.gallery-item h4 {
-    margin-bottom: 5px;
-    font-size: 1.5rem;
-}
-
-.gallery-item p {
-    font-size: 1rem;
-    line-height: 1.4;
-}
-/* Estilos para la sección "Sobre el Artista" */
 .about {
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    padding: 40px 20px;
-    background-color: #fffbf9;
+    flex-direction: row;
+    padding: 20px;
 }
 
 .about-image {
-    flex: 1;
-    padding: 20px;
-    text-align: center;
+    flex: 0 0 250px;
+    margin-right: 20px;
 }
 
 .about-image img {
     width: 100%;
-    height: auto;
-    border-radius: 50%;
-    object-fit: cover;
-    max-width: 250px;
+    border-radius: 8px;
 }
 
 .about-content {
-    flex: 2;
-    padding: 20px;
-    max-width: 600px;
-    text-align: left;
-}
-
-.about h3 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: #f28a8c;
-}
-
-.about p {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: #555;
+    flex: 1;
 }
 
 .social-links {
@@ -165,328 +127,99 @@ nav ul li a:hover {
 }
 
 .social-link {
-    text-decoration: none;
+    margin: 0 10px;
     font-size: 1.5rem;
-    color: #ff66b2;
-    margin-right: 15px;
-    transition: color 0.3s;
+    text-decoration: none;
 }
 
-.social-link:hover {
-    color: #f28a8c;
-}
-
-/* Estilos para la sección Redes Sociales */
 .contact {
+    padding: 20px;
+    background-color: #ffecf1;
+}
+
+.contact-decorations {
     text-align: center;
-    padding: 40px 20px;
-    background-color: #f0f8ff;
 }
 
-.contact h3 {
-    font-size: 2.5rem;
-    color: #ff66b2;
-}
-
-.contact p {
-    font-size: 1.1rem;
-    margin-bottom: 20px;
-    color: #555;
+.contact-decorations .decoration {
+    font-size: 2rem;
+    margin: 0 5px;
 }
 
 .contact-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.form-group {
-    margin-bottom: 20px;
-    width: 100%;
-    max-width: 400px;
-}
-
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 10px;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-bottom: 10px;
-}
-
-.cta-button {
-    background-color: #ff66b2;
-    color: white;
-    padding: 10px 20px;
-    font-size: 1.2rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.cta-button:hover {
-    background-color: #f28a8c;
-}
-
-/* Estilos para el pie de página */
-footer {
-    background-color: #ff66b2;
-    padding: 20px 0;
-    text-align: center;
-    color: white;
-}
-
-footer p {
-    font-size: 1rem;
-    margin-bottom: 10px;
-}
-
-footer .footer-nav {
-    margin-bottom: 10px;
-}
-
-footer .footer-nav a {
-    text-decoration: none;
-    color: white;
-    margin: 0 10px;
-    font-size: 1.2rem;
-    transition: color 0.3s;
-}
-
-footer .footer-nav a:hover {
-    color: #f28a8c;
-}
-
-footer .back-to-top {
-    text-decoration: none;
-    font-size: 1.5rem;
-    color: white;
-    margin-top: 10px;
-    display: inline-block;
-    transition: color 0.3s;
-}
-
-footer .back-to-top:hover {
-    color: #f28a8c;
-}
-
-/* Estilos para los elementos kawaii flotantes */
-.kawaii-element {
-    font-size: 2rem;
-    position: absolute;
-    animation: float 5s ease-in-out infinite;
-    opacity: 0.7;
-    z-index: -1;
-}
-
-.kawaii-element.star {
-    color: #ffeb3b;
-}
-
-.kawaii-element.heart {
-    color: #ff66b2;
-}
-
-.kawaii-element.cloud {
-    color: #ffffff;
-}
-
-/* Animación para los elementos flotantes */
-@keyframes float {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-20px);
-    }
-    100% {
-        transform: translateY(0);
-    }
-}
-
-/* Estilos para hacer la página responsiva */
-@media (max-width: 768px) {
-    .about {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .about-image {
-        padding: 0;
-    }
-
-    .about-content {
-        max-width: 100%;
-    }
-
-    .cta-button {
-        width: 80%;
-    }
-}
-/* Estilos para los botones de navegación */
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #f28a8c;
-    padding: 20px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-nav .logo {
-    font-size: 2rem;
-    font-weight: bold;
-    color: white;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-nav .nav-links {
-    display: flex;
-    gap: 20px;
-}
-
-nav .nav-links a {
-    text-decoration: none;
-    font-size: 1.2rem;
-    color: white;
-    transition: color 0.3s;
-}
-
-nav .nav-links a:hover {
-    color: #ff66b2;
-}
-
-/* Estilos para la galería de dibujos */
-.gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
-    padding: 40px 20px;
-}
-
-.gallery-item {
-    position: relative;
-    overflow: hidden;
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.gallery-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
-.gallery-item img {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-.gallery-item-info {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.6);
-    color: white;
-    padding: 10px;
-    text-align: center;
-}
-
-.gallery-item-info h4 {
-    font-size: 1.5rem;
-    margin-bottom: 5px;
-}
-
-.gallery-item-info p {
-    font-size: 1rem;
-}
-
-/* Estilos para la sección bienvenida */
-.welcome {
-    text-align: center;
-    padding: 40px 20px;
-    background-color: #f28a8c;
-    color: white;
-}
-
-.welcome h2 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-}
-
-.welcome p {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    max-width: 800px;
+    gap: 15px;
+    max-width: 500px;
     margin: 0 auto;
 }
 
-/* Estilos para el header */
-header {
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.form-group button {
+    padding: 10px 20px;
+    background-color: #ffb6c1;
+    border: none;
+    cursor: pointer;
+}
+
+.footer-nav {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: #ff66b2;
-    color: white;
+    justify-content: center;
+    margin-top: 20px;
 }
 
-header .logo {
+.footer-nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+.back-to-top {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
     font-size: 2rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 2px;
 }
 
-/* Responsividad */
-@media (max-width: 768px) {
-    .gallery {
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    }
+.kawaii-element {
+    position: fixed;
+    font-size: 1.5rem;
+    opacity: 0.2;
+    z-index: -1;
+    animation: float 5s ease-in-out infinite;
+}
 
-    nav .nav-links {
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-30px); }
+    100% { transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+    nav ul {
         flex-direction: column;
     }
 
-    .about, .contact, .gallery {
-        padding: 20px;
+    .about {
+        flex-direction: column;
     }
 
-    .cta-button {
-        width: 90%;
-        font-size: 1rem;
+    .about-image {
+        max-width: 200px;
+        margin: 0 auto;
     }
 
-    .about-content, .about-image {
-        text-align: center;
-    }
-}
-
-@media (max-width: 480px) {
-    .welcome h2 {
-        font-size: 2.5rem;
+    .contact-form {
+        grid-template-columns: 1fr;
     }
 
-    .welcome p {
-        font-size: 1rem;
-    }
-
-    .gallery-item-info h4 {
-        font-size: 1.2rem;
-    }
-
-    .gallery-item-info p {
-        font-size: 0.9rem;
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     }
 }
