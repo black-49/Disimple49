@@ -130,42 +130,43 @@
             </div>
         </div>
     </section>
-    <section class="contact" id="contact">
-        <div class="contact-decorations">
-            <span class="decoration">🌟</span>
-            <span class="decoration">🌈</span>
-            <span class="decoration">💕</span>
-            <span class="decoration">✨</span>
-        </div>
-        
-        <h3>¡Hablemos!</h3>
-        <p>¿Te gustaría una comisión personalizada? ¿Tienes alguna pregunta o simplemente quieres saludar? ¡Escríbeme un mensaje y te responderé lo antes posible!</p>
-        
-        <form class="contact-form">
-            <div class="form-group">
-                <input type="text" placeholder="Tu nombre">
-            </div>
-            <div class="form-group">
-                <input type="email" placeholder="Tu correo electrónico">
-            </div>
-            <div class="form-group">
-                <textarea placeholder="Tu mensaje"></textarea>
-            </div>
-            <div class="form-group">
-                <button type="submit" class="cta-button">Enviar Mensaje</button>
-            </div>
-        </form>
-    </section>
-    <footer>
-        <p>© 2025 KawaiiArtSpace - Todos los derechos reservados</p>
-        <div class="footer-nav">
-            <a href="#gallery">Galería</a>
-            <a href="#about">Sobre Mí</a>
-            <a href="#contact">Contacto</a>
-        </div>
-        <a href="#" class="back-to-top">↑</a>
-    </footer>
-</div>
+    .contact {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+}
+
+.contact-decorations {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-button {
+    background-color: #f8c3d9;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border: 2px solid #f8a8c8;
+    border-radius: 25px;
+    color: #333;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.social-button:hover {
+    transform: translateY(-5px);
+    background-color: #f0a0b3;
+}
+
+.social-button:active {
+    transform: translateY(2px);
+}
 
 <!-- Kawaii elementos decorativos -->
 <div class="kawaii-element star" style="top: 120px; left: 10%;">⭐</div>
